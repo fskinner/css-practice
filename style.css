@@ -6,65 +6,182 @@
     NOTE:WORK IN PROGRESS
     USE WITH CAUTION AND TEST WITH ABANDON */
 
-    html,body,div,span,applet,object,iframe,
-    h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-    a,abbr,acronym,address,big,cite,code,
-    del,dfn,em,img,ins,kbd,q,s,samp,
-    small,strike,strong,sub,sup,tt,var,
-    b,u,i,center,
-    dl,dt,dd,ol,ul,li,
-    fieldset,form,label,legend,
-    table,caption,tbody,tfoot,thead,tr,th,td,
-    article,aside,canvas,details,figcaption,figure,
-    footer,header,hgroup,menu,nav,section,summary,
-    time,mark,audio,video{
-        margin:0;
-        padding:0;
-        border:0;
-        outline:0;
-        font-size:100%;
-        font:inherit;
-        vertical-align:baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article,aside,details,figcaption,figure,
-    footer,header,hgroup,menu,nav,section{
-        display:block;
-    }
-    body{
-        line-height:1;
-    }
-    ol,ul{
-        list-style:none;
-    }
-    blockquote,q{
-        quotes:none;
-    }
-    blockquote:before,blockquote:after,
-    q:before,q:after{
-        content:’’;
-        content:none;
-    }
-    /* remember to define visible focus styles! 
-    :focus{
-        outline:?????;
-    } */
-    
-    /* remember to highlight inserts somehow! */
-    ins{
-        text-decoration:none;
-    }
-    del{
-        text-decoration:line-through;
-    }
-    
-    table{
-        border-collapse:collapse;
-        border-spacing:0;
-    }
-    
-    /*------------------------------------*\
-        $MAIN
-    \*------------------------------------*/
-    /* GO! */
-    
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+.page {
+  min-width: 300px !important;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+.TopBar {
+  height: 40px;
+  background: #fff;
+  max-width: 1100px;
+}
+
+.ContentArea {
+  display: flex;
+  justify-content: center;
+  background: #eee;
+  padding: 40px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.LeftMenu {
+  background: #ddd;
+  font-size: 14px;
+}
+
+.LeftMenu, .RightMenu {
+  flex: 0 0 210px;
+}
+
+.MainContent {
+  flex: 0 0 580px;
+  margin: 0 20px;
+}
+
+.DayCard, .MenuCard {
+  min-height: 130px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.MenuCard {
+  height: 80px;
+}
+
+.FeedList {
+  list-style: none;
+}
+
+.FeedList > li {
+  padding: 7px 10px;
+  margin: 5px 0;
+}
+
+.FeedList > li:hover {
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.DayCard.Highlights > header {
+  padding: 20px 0;
+  margin: 0 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.DayCard.Highlights > header > h2 {
+  display: inline;
+}
+
+.DayCard.Highlights > header > span {
+  float: right;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.DayCard.Highlights > header > a {
+  display: inline;
+  text-decoration: none;  
+}
+
+.DayCard.Highlights > header > a:link {
+  text-decoration: none;
+}
+
+.Highlights > ul > li {
+  padding: 20px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.LowerGrayFont {
+  font-size: 12px;
+  color: #888;
+}
+
+.Highlights .LoadMore {
+  padding: 20px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Highlights .LoadMore:hover {
+  text-decoration: underline;
+}
+
+.HLDescription {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.HLTags {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.HLTags:hover {
+  background-color: #ddd;
+}
